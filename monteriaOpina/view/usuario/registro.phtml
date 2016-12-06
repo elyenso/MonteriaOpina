@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Monteria Opina</title>
+		<link rel="stylesheet" href="resource/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resource/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="resource/css/bootstrap-theme.css.map">
+        <link rel="stylesheet" href="resource/css/bootstrap-theme.css">
+        
+
+
+       
+
+		
+	</head>
+	<body>
+		<div class="container">
+
+
+
+
+
+            <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign In</div>
+                        <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="/monteriaOpina">Home</a></div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+
+
+                    <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form" action="?c=Usuario&a=Guardar" method="POST">
+                                
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+                                    
+                                
+                                  
+                                <div class="form-group">
+                                    <label for="nombre" class="col-md-3 control-label">Nombre</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre">
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="apellido" class="col-md-3 control-label">Apellidos</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="apellidos" placeholder="Ingrese su apellido">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="correo_user" name="correo" onFocus="Limpiar()" onBlur="validarUsuario()" placeholder="Ingrese su email">
+                                    </div>
+                                </div>
+                                 <div  id="mensaje_correo_repetido" class="alert alert-danger" style="display:none">
+                                <i class="glyphicon glyphicon-remove-sign"></i> &nbsp; Este email ya existe en la base de datos. 
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="password" placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="fecha_nacimiento" class="col-md-3 control-label">Fecha Nacimiento</label>
+                                    <div class="col-md-9">
+                                        <input type="date" class="form-control" name="fecha_nacimiento" placeholder="fecha">
+                                    </div>
+                                </div>
+                                    
+                              
+
+                                <div class="form-group">
+                                    <!-- Button -->                                        
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+                                    </div>
+                                </div>
+                                
+                              
+                                     <div id="cont">
+            </div>
+                                
+                            </form>
+                             <div  id="mensaje_registro" class="alert alert-info" style="display:none">
+                      <i class="glyphicon glyphicon-log-in"></i> &nbsp; Registro exitoso,revise su correo para activar la cuenta. 
+                 </div>
+                         </div>
+
+                         </div>
+                         </div>              
+                
+         
+    </div>
+     <script src="resource/js/jquery-2.2.3.min.js"></script>
+          <script src="resource/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8" ></script>
+          <script src="resource/js/bootstrap.min.js" type="text/javascript" charset="utf-8" ></script>
+           <script src="resource/js/validador.js" type="text/javascript" charset="utf-8" ></script>
+
+        
+    </body>
+</html>

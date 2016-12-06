@@ -1,0 +1,38 @@
+<h1 class="page-header">Proyectos</h1>
+
+<div class="well well-sm text-right">
+    <a class="btn btn-primary" href="?c=Proyecto&a=Editar">Nuevo Proyecto</a>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Fecha Inicio</th>
+            <th >Fecha Final</th>
+            <th>Nombre Archivo</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach($this->model->Listar() as $r): ?>
+        <tr>
+            <td><?php echo $r->titulo; ?></td>
+            <td><?php echo $r->descripcion; ?></td>
+            <td><?php echo $r->fecha_inicio; ?></td>
+            <td><?php echo $r->fecha_terminacion; ?></td>
+            <td><a href="<?php echo "resource/proyectos/".$r->nombre_archivo; ?>" target="_blank"><?php echo $r->nombre_archivo; ?>  <i class="fa fa-file-pdf-o" style="font-size:24px"></i></a> </td>
+
+            <td>
+               
+                <a href="?c=Proyecto&a=Editar&id=<?php echo $r->id; ?>">Editar</a>
+            </td>
+            <td>
+                <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=Proyecto&a=Eliminar&id=<?php echo $r->id; ?>"> <span class="glyphicon glyphicon-remove"></span></a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table> 

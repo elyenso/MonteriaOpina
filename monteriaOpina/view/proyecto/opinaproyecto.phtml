@@ -1,0 +1,37 @@
+<h1 class="page-header">Monteria Opina</h1>
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Fecha Inicio</th>
+            <th >Fecha Final</th>
+            <th>Nombre Archivo</th>
+            <th>Opinion</th>
+            <th>Usuario</th>
+            <th>Opinar</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach($this->model->Listar() as $r): ?>
+        <tr>
+            <td><?php echo $r->titulo; ?></td>
+            <td><?php echo $r->descripcion; ?></td>
+            <td><?php echo $r->fecha_inicio; ?></td>
+            <td><?php echo $r->fecha_terminacion; ?></td>
+            <td><a href="<?php echo "resource/proyectos/".$r->nombre_archivo; ?>" target="_blank"><?php echo $r->nombre_archivo; ?>  <i class="fa fa-file-pdf-o" style="font-size:24px"></i></a> </td>
+            <td><?php echo $r->opinion; ?></td>
+            <td><?php echo $r->usuario; ?></td>
+            <td>
+               
+                <a href="?c=Proyecto&a=OpinarProyecto&id=<?php echo $r->id; ?>">Opinar</a>
+            </td>
+           
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table> 
